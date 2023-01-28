@@ -1,13 +1,21 @@
-<html> <header># <b>CSC468-group-7</b><br></header>
+<html> <h1><b>Cloud Computing</b><br></h1>
   <body><b>Overview</b><br>
-The purpose of this repository is to demonstrate the implemenation of cloud based computing.
-
-Concepts include:<br>
-CloudLab:<br>
-  *Containerizaiton<br>
-Virtualization
-__Containers Orchestration__
-*Kubernetes
-Orchestraion
-  </body>
+<p>The purpose of this repository is to demonstrate the implemenation of cloud based computing.</p>
+<h2><b>Concepts include:</b></h2>
+  <ul>
+    <li>Cloud Infrastructure</li>
+    <li>Service Models & Deployment Models</li>
+    <li>Containerizaiton</li>
+    <li>Virtualization</li>
+    <li>Containers Orchestration</li>
+  </ul>
+ <h2> Technologies </h2>
+   <ul>
+    <li>CloudLab</li>
+    <li>KVM (Kernal Virtual Machine)</li>
+    <li>Docker</li>
+    <li>Kubernetes</li>
+    
+   </ul>
+ </body>
 </html>
