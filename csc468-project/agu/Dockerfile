@@ -1,15 +1,14 @@
-FROM node:17-alpine #14.17.3
+FROM node:17-alpine
 
 WORKDIR /app
 
 COPY package.json ./
 COPY package-lock.json ./
+COPY ./ ./
 
 RUN npm install
-Run install -g serve
+RUN npm i
 
-COPY . ./
 
-EXPOSE 80
 
-CMD ["serve", "-s" "build"]
+CMD ["npm", "run", "start"]
