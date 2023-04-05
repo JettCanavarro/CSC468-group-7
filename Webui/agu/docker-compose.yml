@@ -1,0 +1,11 @@
+version: "3.3"
+
+
+services:
+  app:
+    container_name: agu-react-c
+    image: docker-agu-react-i
+    build:
+      context: ./Webui/agu
+    ports:
+      - 8080:80
