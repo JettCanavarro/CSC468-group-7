@@ -6,6 +6,6 @@ services:
     container_name: agu-react-c
     image: docker-agu-react-i
     build:
-      context: ./Webui/agu
+      context: ./webui
     ports:
       - 8080:80
