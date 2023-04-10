@@ -5,7 +5,7 @@ FROM mysql/mysql-server:latest
 ENV MYSQL_ROOT_PASSWORD=password
 
 # Create a database and user
-ENV MYSQL_DATABASE=database
+ENV MYSQL_DATABASE=maindb
 ENV MYSQL_USER=user
 ENV MYSQL_PASSWORD=123
 
