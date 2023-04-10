@@ -11,3 +11,5 @@ ENV MYSQL_PASSWORD=123
 
 # Copy the custom SQL script into the container
 COPY ./init.sql /docker-entrypoint-initdb.d/
+#copy csv file into Dockerfile
+#No path required if in same directory for csv file
