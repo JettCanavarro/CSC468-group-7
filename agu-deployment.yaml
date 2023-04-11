@@ -14,51 +14,7 @@ spec:
     spec:
       containers:
       - name: webui
-        image: ##insert image ip here
+        image: jettcanavarro/allgroundup:webui
         ports:
-          - name: http-port
-            containerPort: 80
----
+          - containerPort: 80
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: database
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: database
-  template:
-    metadata:
-      labels:
-        app: database
-    spec:
-      containers:
-      - name: database
-        image: #insert 
-        ports:
-          - name: http-port
-            containerPort: #could be a different one for database
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: worker
-spec:
-  replicas: 4 #maybe more?
-  selector:
-    matchLabels:
-      app: worker
-  template:
-    metadata:
-      labels:
-        app: worker
-    spec:
-      containers:
-      - name: worker
-        image: #insert image ip here
-        ports:
-          - name: http-port
-            containerPort: 80
