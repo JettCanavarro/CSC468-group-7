@@ -1,0 +1,98 @@
+.MainPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  padding: 0 50px;
+  background-color: #ffd900;
+  
+}
+
+.Header h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  color: #542c0f;
+}
+
+.Buttons {
+  display: flex;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin-left: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #542c0f;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #311708;
+}
+
+.Container {
+  flex-grow: 1;
+  background-color: #ffd900;
+}
+
+.CenteredButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+
+
+
+.Footer {
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #000;
+}
+
+.FooterButtons {
+  display: flex;
+  align-items: center;
+}
+
+.FooterButton {
+  width: 150px;
+  height: 40px;
+  margin-right: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #542c0f;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.FooterButton:hover {
+  background-color: #311708;
+}
