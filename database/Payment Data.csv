@@ -1,0 +1,2 @@
+id,payment_type_id,data_name,data_type
+1,101,PayPal,String
