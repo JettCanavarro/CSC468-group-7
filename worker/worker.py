@@ -47,6 +47,18 @@ def login():
     else:
         return "User not found."
 
+@app.route('/menu', methods=['GET', 'POST'])
+def menu():
+     data = request.get_json()
+     menuitem = data.get("menuitem")
+     description = data.get("description")
+     ingredients = data.get("ingredients")
+     price = data.get("price")
+     categoryid = data.get("categoryid")
+        
+     cursor = connection.cursor()
+     cursor.execute('SELECT )', (categoryid, ))
+     result = cursor.fetchone()
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
