@@ -9,3 +9,5 @@ services:
       context: ./webui
     ports:
       - 8080:80
+    expose:
+      - 8000
