@@ -2,7 +2,7 @@ import mysql.connector as sqlconnector
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-connection = sqlconnector.connect(user='root', password='password', host='mysql', database='maindb')
+connection = sqlconnector.connect(user='user', password='123', host='mysql-container', database='maindb')
 
 
 @app.route('/signup', methods=['GET', 'POST'])
