@@ -1,22 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// App.js
 
+import React, { useState } from 'react';
 import MainPage from './MainPage';
-import CustomersPage from './CustomersPage';
-import VendorsPage from './VendorsPage';
-import DriversPage from './DriversPage';
+import SignUp from './SignUp';
+import Login from './Login';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('MainPage');
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  let page;
+
+  if (currentPage === 'SignUp') {
+    page = <SignUp handlePageChange={handlePageChange} />;
+  } else if (currentPage === 'Login') {
+    page = <Login handlePageChange={handlePageChange} />;
+  } else {
+    page = <MainPage handlePageChange={handlePageChange} />;
+  }
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/" element={<CustomersPage />} />
-        <Route path="/vendors" component={VendorsPage} />
-        <Route path="/drivers" component={DriversPage} />
-      </Routes>
-    </Router>
+    <div>
+      {page}
+    </div>
   );
 }
 
 export default App;
+
