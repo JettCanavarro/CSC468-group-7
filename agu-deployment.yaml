@@ -1,24 +1,4 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: webui
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: webui
-  template:
-    metadata:
-      labels:
-        app: webui
-    spec:
-      containers:
-      - name: webui
-        image: jettcanavarro/allgroundup:webui
-        ports:
-          - containerPort: 80
 
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -53,24 +33,3 @@ spec:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
           claimName: mysql-pv-claim
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: worker
-spec:
-  replicas:
-  selector:
-    matchLabels:
-      app: worker
-  template:
-    metadata:
-      labels:
-        app: worker
-    spec:
-      containers:
-      - name: worker
-        image: jettcanavarro/allgroundup:worker
-        ports:
-          - name: http-port
-            containerPort: 80
