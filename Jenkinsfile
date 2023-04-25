@@ -21,7 +21,7 @@ pipeline {
                     sh "sed -i 's/BUILD_NUMBER/${BUILD_NUMBER}/g' agu-deployment.yaml"
                     sh 'scp -r -v -o StrictHostKeyChecking=no *.yaml ${userid}@${registry}:~/'
                     sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/agu-deployment.yaml'
-                    sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/agu-services.yaml
+                    sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/agu-services.yaml'
                 }
             }
         }
