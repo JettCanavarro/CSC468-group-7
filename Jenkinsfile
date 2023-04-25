@@ -23,6 +23,7 @@ pipeline {
                     sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/mysql-secret.yaml'
                     sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/mysql-storage.yaml'
                     sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/agu-services.yaml'
+                    
                 }
             }
         }
