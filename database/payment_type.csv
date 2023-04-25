@@ -1,0 +1,5 @@
+payment_type_id,type_name
+1,Visa
+2,Discover
+3,Mastercard
+4,American Express
