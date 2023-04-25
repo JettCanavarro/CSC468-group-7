@@ -1,6 +1,6 @@
-id,city_name,zip_code
-1,New York City,10001
-2,Los Angeles,90001
-3,Chicago,60601
-4,Houston,77001
-5,Miami,33101
+id,city_name,state,zip_code
+1,West Chester,PA,19380
+2,Princeton,NJ,08540
+3,Kennet Square,PA,19348
+4,Manalapan,NJ,07726
+5,Asbury Park,NJ,07712
