@@ -17,6 +17,6 @@ spec:
         image: jettcanavarro/allgroundup:webui
         ports:
           - containerPort: 80
-          - targetPort: 80
-          - nodePort: 8080
+            targetPort: 80
+            nodePort: 8080
 
