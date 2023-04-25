@@ -12,13 +12,11 @@ spec:
       labels:
         app: webui
     spec:
-      type: NodePort
       containers:
       - name: webui
         image: jettcanavarro/allgroundup:webui
         ports:
           - containerPort: 80
-            targetPort: 80
-            nodePort: 8080
+            
            
 
