@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,username,password,email,phone,customer_address,zip_id
+1,Jessica,Arriaiga,coffee123,BuyCoffee01,coffeelover@gmail.com,2123052244,844 S Campus Drive,1
+2,Jett,Canavarro,cloud123,Cloud01,cloudlover@gmail.com,7173342434,844 S Campus Drive,1
+3,Mateen,Ali,user123,User01,user123@gmail.com,2234567789,844 S Campus Drive,1
+4,Alejandro,Almaraz,computer123,Computer01,computer123@gmail.com,2237899900,844 S Campus Drive,1
+5,Steven",Coffey,games123,Games01,games123@gmail.com,7174845566,844 S Campus Drive,1
