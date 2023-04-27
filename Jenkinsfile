@@ -1,7 +1,7 @@
 pipeline {
     agent none 
     environment {
-        docker_app = "database"
+         docker_app = "database"
         registry = "155.98.37.91" //CHANGE THIS IF THE EXPERIMENT GOES DOWN
         userid = "jc997541" //OTHER GROUP MEMBERS CHANGE THIS
        
