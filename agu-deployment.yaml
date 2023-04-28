@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webui
-        image: jettcanavarro/allgroundup:webui
+        image: jettcanavarro/allgroundup:webui 
         ports:
           - containerPort: 80
            
