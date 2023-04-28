@@ -2,23 +2,22 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(to bottom right, #7a6f41, #c4a777);
 }
 
 .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20%;
+  height: 16%;
   padding: 0 50px;
-  background-color: #ffd900;
+  background-color: #745730;
 }
 
-.Header h1 {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  font-size: 3rem;
-  color: #542c0f;
+.Header img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
 }
 
 .Buttons {
@@ -26,8 +25,8 @@
 }
 
 button {
-  width: 200px;
-  height: 50px;
+  width: 160px;
+  height: 40px;
   margin-left: 20px;
   font-size: 20px;
   text-transform: uppercase;
@@ -48,8 +47,9 @@ button:hover {
 }
 
 .Container {
+  background-size: cover;
+  background-position: center;
   flex-grow: 1;
-  background-color: #ffd900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,31 +96,28 @@ button:hover {
 }
 
 .Footer {
-  height: 20%;
+  height: 7%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #000;
-}
-
-.FooterButtons {
-  display: flex;
-  align-items: center;
+  background: linear-gradient(to bottom right, #745715, #7a6f41);
 }
 
 .FooterButton {
   margin-right: 10px;
-  background-color: transparent;
   color: #ffffff;
-  border: none;
   padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: none;
+  background-color: transparent;
+  border-bottom: solid 2px transparent;
 }
 
 .FooterButton:hover {
-  background-color: #201814;
+  background-color: transparent;
   color: #ffd900;
+  border-bottom: solid 2px #ffd900;
+  padding-bottom: 3px;
 }
-
