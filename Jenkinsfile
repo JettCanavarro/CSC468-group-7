@@ -11,7 +11,7 @@ pipeline {
         stage ('Deploy') {
             agent {
                 node {
-                    label 'deploy'
+                    label 'deploy' 
                 }
             }
             steps {
