@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webui
-        image: jettcanavarro/allgroundup:webui
+        image: AGU/allgroundup:webui
         ports:
           - containerPort: 80
 
@@ -35,7 +35,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: jettcanavarro/allgroundup:database
+      - image: AGU/allgroundup:database
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
