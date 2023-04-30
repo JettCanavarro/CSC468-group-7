@@ -51,8 +51,15 @@ button:hover {
   background-position: center;
   flex-grow: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.SearchContainer {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .SearchBar {
@@ -65,6 +72,10 @@ button:hover {
   background-color: #f2f2f2;
   border-radius: 50px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .SearchBar input[type="text"] {
@@ -73,6 +84,11 @@ button:hover {
   border: none;
   background-color: transparent;
   margin-left: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #4a4a4a;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .SearchBar button {
@@ -94,6 +110,23 @@ button:hover {
 .SearchBar button:hover {
   background-color: #724a34;
 }
+
+.Slogan {
+  margin-top: 0.5rem;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.Slogan h2 {
+  font-family: Roboto flex;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 2px 2px 0 #97a0a0, -2px 2px 0 #514949, 2px -2px 0 #786f6f, -2px -2px 0 #beac06;
+}
+
+
 
 .Footer {
   height: 7%;
@@ -121,4 +154,3 @@ button:hover {
   border-bottom: solid 2px #ffd900;
   padding-bottom: 3px;
 }
-
