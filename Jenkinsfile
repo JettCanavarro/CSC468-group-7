@@ -16,9 +16,9 @@ pipeline {
             } 
             steps {
                 sshagent(credentials: ['cloudlab']) {
-                    sh "sed -i 's/REGISTRY/${registry}/g' agu-deployment.yaml"
-                    sh "sed -i 's/DOCKER_APP/${docker_app}/g' agu-deployment.yaml"
-                    sh "sed -i 's/BUILD_NUMBER/${BUILD_NUMBER}/g' agu-deployment.yaml"
+                    sh "sed -i 's/REGISTRY/${registry}/g' webui-deployment.yaml"
+                    sh "sed -i 's/DOCKER_APP/${docker_app}/g' webui-deployment.yaml"
+                    sh "sed -i 's/BUILD_NUMBER/${BUILD_NUMBER}/g' webui-deployment.yaml"
                     sh 'scp -r -v -o StrictHostKeyChecking=no *.yaml ${userid}@${registry}:~/'
                     sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/webui-deployment.yaml'
                     sh 'ssh -o StrictHostKeyChecking=no ${userid}@${registry} kubectl apply -f /users/${userid}/webui-services.yaml'
