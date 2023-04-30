@@ -13,7 +13,7 @@ pipeline {
                 node {
                     label 'deploy' 
                 }
-            }
+            } 
             steps {
                 sshagent(credentials: ['cloudlab']) {
                     sh "sed -i 's/REGISTRY/${registry}/g' agu-deployment.yaml"
