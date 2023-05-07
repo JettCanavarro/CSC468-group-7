@@ -27,7 +27,7 @@
         <div className="Container" style={backgroundStyle}>
           <div className="SearchContainer">
             <form className="SearchBar">
-            <input type="text" placeholder="Search your Favorite Coffee shops..." />
+            <input type="text" placeholder="Life's Too Short For Bad Coffee" />
             <button type="submit">Search</button>
             </form>
           </div>
