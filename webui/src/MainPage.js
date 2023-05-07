@@ -1,6 +1,6 @@
   import React, { useState } from 'react';
   import './MainPage.css';
-  import logo from './img/agu logo 3.png';
+  import logo from './img/agu logo 4.png';
   import backgroundImg from './img/background.png';
 
   function MainPage(props) {
