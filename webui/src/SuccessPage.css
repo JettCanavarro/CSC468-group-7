@@ -1,0 +1,14 @@
+.button-container {
+    text-align: center;
+}
+
+.button-container button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #542c0f;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
