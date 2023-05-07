@@ -27,12 +27,12 @@
         <div className="Container" style={backgroundStyle}>
           <div className="SearchContainer">
             <form className="SearchBar">
-            <input type="text" placeholder="Life's Too Short For Bad Coffee" />
+            <input type="text" placeholder="Search your favorite local coffee shops..." />
             <button type="submit">Search</button>
             </form>
           </div>
           <div className="Slogan">
-          <h2>Your Daily Grind, Delivered</h2>
+          <h2>"Life's Too Short For Bad Coffee"</h2>
           </div>
         </div>
         <div className="Footer">
