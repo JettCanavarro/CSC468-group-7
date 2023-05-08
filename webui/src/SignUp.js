@@ -1,27 +1,63 @@
 import React, { useState } from 'react';
 import './SignUp.css';
+import SuccessPage from './SuccessPage.js';
 
 function SignUp(props) {
   const { handlePageChange } = props;
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
+    username: '',
     email: '',
     password: '',
+    phoneNumber: '',
+    address: '',
+    zipcode: '',
   });
+  
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e, property) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [property]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add your logic for submitting the form data
-    console.log(formData);
-    handlePageChange('MainPage');
-  };
+    const { firstName, lastName, username, email, password, phoneNumber, address, zipcode } = formData;
+    const data = {
+      firstName,
+      lastName,
+      username,
+      email,
+      password,
+      phoneNumber,
+      address,
+      zipcode
+    };
+  
+    fetch('http://127.0.0.1:5000/api/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          console.log('Form submission successful!');
+          setIsFormSubmitted(true);
+        } else {
+          console.error('Error submitting form:', data.error);
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting form:', error);
+      });  
+  };  
 
   const handleCancel = () => {
     handlePageChange('MainPage');
@@ -29,62 +65,68 @@ function SignUp(props) {
 
   return (
     <div className="signup-form-container">
+      {isFormSubmitted ? (
+        <SuccessPage handlePageChange={handlePageChange} />
+      ) : (
+      <>
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-input">
           <label>
             First Name:
-            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+            <input type="text" value={formData.firstName} onChange={(e) => handleChange(e, 'firstName')} />
           </label>
         </div>
         <div className="form-input">
           <label>
             Last Name:
-            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
+            <input type="text" value={formData.lastName} onChange={(e) => handleChange(e, 'lastName')} />
           </label>
         </div>
         <div className="form-input">
           <label>
             Username:
-            <input type="username" name="username" value={formData.userName} onChange={handleChange} />
+            <input type="text" value={formData.username} onChange={(e) => handleChange(e, 'username')} />
           </label>
         </div>
         <div className="form-input">
           <label>
             Email:
-            <input type="email" name="email" value={formData.email} onChange={handleChange} />
+            <input type="text" value={formData.email} onChange={(e) => handleChange(e, 'email')} />
           </label>
         </div>
         <div className="form-input">
           <label>
             Password:
-            <input type="password" name="password" value={formData.password} onChange={handleChange} />
+            <input type="text" value={formData.password} onChange={(e) => handleChange(e, 'password')} />
           </label>
         </div>
         <div className="form-input">
           <label>
             Phone Number:
-            <input type="phone number" name="phone" value={formData.phoneNumber} onChange={handleChange} />
+            <input type="text" value={formData.phoneNumber} onChange={(e) => handleChange(e, 'phoneNumber')} />
           </label>
         </div>
         <div className="form-input">
           <label>
             Address:
-            <input type="address" name="address" value={formData.address} onChange={handleChange} />
+            <input type="text" value={formData.address} onChange={(e) => handleChange(e, 'address')} />
           </label>
         </div>
         <div className="form-input">
           <label>
             Zipcode:
-            <input type="zipcode" name="zipcode" value={formData.zipcode} onChange={handleChange} />
+            <input type="int" value={formData.zipcode} onChange={(e) => handleChange(e, 'zipcode')} />
           </label>
         </div>
         <div className="form-input">
           <button type="submit">Submit</button>
           <button type="button" onClick={handleCancel}>Cancel</button>
         </div>
-      </form>
-    </div>
+        </form>
+      </>
+    )}
+  </div>
   );
 }
 
