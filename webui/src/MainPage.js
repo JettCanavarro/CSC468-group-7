@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+  import React, { useState } from 'react';
   import './MainPage.css';
-  import logo from './img/agu logo 3.png';
+  import logo from './img/agu logo 4.png';
   import backgroundImg from './img/background.png';
 
   function MainPage(props) {
@@ -27,12 +27,12 @@ import React, { useState } from 'react';
         <div className="Container" style={backgroundStyle}>
           <div className="SearchContainer">
             <form className="SearchBar">
-            <input type="text" placeholder="Search your Favorite Coffee shops..." />
+            <input type="text" placeholder="Search your favorite local coffee shops..." />
             <button type="submit">Search</button>
             </form>
           </div>
           <div className="Slogan">
-          <h2>Your Daily Grind, Delivered</h2>
+          <h2>"Life's Too Short For Bad Coffee"</h2>
           </div>
         </div>
         <div className="Footer">
