@@ -2,8 +2,8 @@ pipeline {
     agent none 
     environment {
         docker_app = "worker"
-        registry = "155.98.37.91" //CHANGE THIS IF THE EXPERIMENT GOES DOWN
-        userid = "jc997541" //OTHER GROUP MEMBERS CHANGE THIS
+        registry = "155.98.37.91" 
+        userid = "jc997541" 
        
     }
     stages {
