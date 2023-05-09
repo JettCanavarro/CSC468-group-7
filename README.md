@@ -20,6 +20,7 @@
     <h2> How To Deploy (for Instructor) </h2>
     <h3>Building the Docker Containers</h3>
     <ul>
+      <li>Build in this order</li>
       <h4>Webui:</h4>
         <li>Navigate to webui directory</li>
         <li>docker build -t webui . </li>
@@ -31,6 +32,7 @@
       <h4>Worker:</h4>
         <li>Navigate to worker directory</li>
         <li>docker build -t worker . </li>
+      <li>docker run -d worker</li>
       <li>Navigate to localhost:8080 or cloudlab_session_url:8080</li>
     </ul>
     <h3>Building with Kubernetes</h3>
